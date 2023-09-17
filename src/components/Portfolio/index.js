@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import Loader from 'react-loaders'
 import AnimatedLetters from '../AnimatedLetters'
 import './index.scss'
-import ReactCardFlip from 'react-card-flip'
+
 // import { getDocs, collection } from 'firebase/firestore'
 // import { db } from '../../firebase'
 
@@ -74,8 +74,8 @@ const Portfolio = () => {
         <div className="images-container">
           {portfolio.map((port, idx) => {
             return (
-              <ReactCardFlip isFlipped={flip} flipDirection="horizontal" key={port.id}> 
-                <div className="image-box" >
+               
+                <div className="image-box" key={port.id}>
                   <img
                     src={port.image}
                     className="portfolio-image"
@@ -89,16 +89,7 @@ const Portfolio = () => {
                     </button>
                   </div>
                 </div>
-                
-                  <div className="content" key={idx}>
-                    <p className="title">{port.name}</p>
-                    <h4 className="description">{port.description}</h4>
-                    <button className="btn" onClick={() => setFlip(!flip)}>
-                      View
-                    </button>
-                  
-                </div>
-              </ReactCardFlip>  
+                 
             )
           })}
         </div>
@@ -112,7 +103,7 @@ const Portfolio = () => {
         <h1 className="page-title">
           <AnimatedLetters
             letterClass={letterClass}
-            strArray={'Portfolio'.split('')}
+            strArray={'My Work'.split('')}
             idx={15}
           />
         </h1>

@@ -1,0 +1,110 @@
+.skills-page {
+  padding-left: 100px;
+  padding-right: 50px;
+  width: calc(100% - 150px);
+  position: initial;
+  height: 100%;
+  overflow: auto;
+
+  h1.page-title {
+    margin-left: 50px;
+    margin-top: 50px;
+  }
+
+  .skills--section {
+    display: flex;
+    padding: 149.33px 85.33px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 106.667px;
+  }
+  .skills--section--heading {
+    color: #ffd700;
+    font-size: 44px;
+    font-weight: 700;
+    line-height: 77px;
+    margin-left: 60px;
+    margin-top: 60px;
+  }
+  .skills--section--container {
+    display: grid;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 42.6px;
+    grid-template-columns: repeat(4, 1fr);
+    padding-bottom: 13px;
+  }
+  .skills--section--card {
+    display: flex;
+    padding: 10px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+    flex: 1 0 0;
+    border-radius: 19.6px;
+    background-image: url('../../assets/images/4884785.jpg');
+    background: cover;
+    min-height: 150px;
+    // max-height: 350px;
+  }
+  .skills--section--card:hover {
+    // border-bottom: 6px solid #181818;
+    background:#ffd700;
+    opacity: 0.85;
+  
+  }
+  .skills--section--card:hover .skills--section--description {
+    color: #181818;
+  }
+
+  .skills--section--card:hover .skills--section--title {
+    color: #181818;
+  }
+  .skills--section--img {
+    display: flex;
+    // height: 32px;
+    // max-width: 10px;
+    // padding: 1.3px;
+    // justify-content: center;
+    // align-items: center;
+    // gap: 1.3px;
+    // border-radius: 10.6px;
+    // background: #fff;
+    // box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.1);
+  }
+  .skills--section--card--content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1px;
+    align-self: stretch;
+  }
+  .skills--section--title {
+    color: rgba(88, 156, 228, 0.907);
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 5px;
+  }
+  .skills--section--description {
+    color: black;
+    font-size: 10.3px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 32px;
+  }
+
+  .experience--section--container {
+    display: grid;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 42.6px;
+    grid-template-columns: repeat(2, 1fr);
+    padding-bottom: 13px;
+  }
+}
+
+
+
+
+
