@@ -2,8 +2,7 @@ import { useEffect, useState } from 'react'
 import Loader from 'react-loaders'
 import AnimatedLetters from '../AnimatedLetters'
 import './index.scss'
-import data from '../../data/index.json'
-import { workExperience } from '../../data/data'
+import { workExperience, skills } from '../../data/data'
 
 const Experience = () => {
   const [letterClass, setLetterClass] = useState('text-animate')
@@ -47,28 +46,50 @@ const Experience = () => {
           />
         </h1>
         <div className="portfolio--container">
-          <h2 className="skills--section--heading"><AnimatedLetters letterClass={letterClass} strArray={'Skills'.split('')} idx={25}/>  </h2>
+          <h2 className="skills--section--heading">
+            <AnimatedLetters
+              letterClass={letterClass}
+              strArray={'Skills'.split('')}
+              idx={25}
+            />{' '}
+          </h2>
         </div>
         <div className="skills--section--container">
-          {data?.skills?.map((item, index) => (
-            <div key={index} className="skills--section--card">
-              <div className="skills--section--img">
-                <img
-                  src={require('../../data/img/product-chain-1.png')}
-                  alt="Product Chain"
-                />
+          {skills?.map((item, index) => (
+            <div className='skills--section--container--inner'>
+              <div key={index} className="skills--section--card front">
+                <div className="skills--section--img">
+                  <img src={item.image} alt="Product Chain" />
+                </div>
+                <div className="skills--section--card--content">
+                  <h3 className="skills--section--title">{item.title}</h3>
+                  <p className="skills--section--description">
+                    {item.description}
+                  </p>
+                </div>
               </div>
-              <div className="skills--section--card--content">
-                <h3 className="skills--section--title">{item.title}</h3>
-                <p className="skills--section--description">
-                  {item.description}
-                </p>
-              </div>
+              {/* <div key={index} className="skills--section--card back">
+                <div className="skills--section--img">
+                  <img src={item.image} alt="Product Chain" />
+                </div>
+                <div className="skills--section--card--content">
+                  <h3 className="skills--section--title">{item.title}</h3>
+                  <p className="skills--section--description">
+                    {item.description}
+                  </p>
+                </div>
+              </div> */}
             </div>
           ))}
         </div>
         <div className="portfolio--container">
-          <h2 className="skills--section--heading"><AnimatedLetters letterClass={letterClass} strArray={'Experience'.split('')} idx={25}/>  </h2>
+          <h2 className="skills--section--heading">
+            <AnimatedLetters
+              letterClass={letterClass}
+              strArray={'Experience'.split('')}
+              idx={25}
+            />{' '}
+          </h2>
         </div>
         <div className="experience--section--container">
           {workExperience?.map((item, index) => (
