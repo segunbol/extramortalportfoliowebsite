@@ -168,28 +168,28 @@ export const workExperience = [
 export const skills = [
   {
     id: '1',
-    image: 'https://res.cloudinary.com/djt6ixhup/image/upload/v1694992410/front-end_ckarmi.png',
+    image: 'https://res.cloudinary.com/djt6ixhup/image/upload/v1695125891/front-end_1_aq1zz6.png',
     title: 'Front-End',
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspenmdisse varius eim in eros elementum tristique',
   },
   {
     id: '2',
-    image: 'https://res.cloudinary.com/djt6ixhup/image/upload/v1694992410/backend_oxnpjo.png',
+    image: 'https://res.cloudinary.com/djt6ixhup/image/upload/v1695126124/backend_1_b4kdhr.png',
     title: 'Back-End',
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspenmdisse varius eim in eros elementum tristique',
   },
   {
     id: '3',
-    image: 'https://res.cloudinary.com/djt6ixhup/image/upload/v1694993299/agile_i1t2hm.png',
+    image: 'https://res.cloudinary.com/djt6ixhup/image/upload/v1695126275/settings_1_pkon7n.png',
     title: 'Dev-Ops',
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspenmdisse varius eim in eros elementum tristique',
   },
   {
     id: '4',
-    image: 'https://res.cloudinary.com/djt6ixhup/image/upload/v1694992411/system_a7p6vl.png',
+    image: 'https://res.cloudinary.com/djt6ixhup/image/upload/v1695126554/database_1_j70ovt.png',
     title: 'System Design',
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspenmdisse varius eim in eros elementum tristique',
