@@ -2,7 +2,8 @@ import { useEffect, useState } from 'react'
 import Loader from 'react-loaders'
 import AnimatedLetters from '../AnimatedLetters'
 import './index.scss'
-import { workExperience, skills } from '../../data/data'
+import { skills } from '../../data/data'
+import TimeLine from '../Timeline'
 
 const Experience = () => {
   const [letterClass, setLetterClass] = useState('text-animate')
@@ -91,24 +92,7 @@ const Experience = () => {
             />{' '}
           </h2>
         </div>
-        <div className="experience--section--container">
-          {workExperience?.map((item, index) => (
-            <div key={index} className="skills--section--card">
-              <div className="skills--section--img">
-                <img
-                  src={require('../../data/img/product-chain-1.png')}
-                  alt="Product Chain"
-                />
-              </div>
-              <div className="skills--section--card--content">
-                <h3 className="skills--section--title">{item.companyName}</h3>
-                <p className="skills--section--description">
-                  {item.designation}
-                </p>
-              </div>
-            </div>
-          ))}
-        </div>
+        <TimeLine />
       </div>
 
       <Loader type="pacman" />

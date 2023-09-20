@@ -1,8 +1,15 @@
 body {
-  background: #3da3d5;
+  /* background: #3da3d5; */
   font-family: "Montserrat", sans-serif;
   font-size: 16px;
-  color: rgb(53, 53, 53);
+  color: rgba(88, 156, 228, 0.907);
+}
+
+.body:hover {
+  color:black;
+}
+.color {
+  color: antiquewhite;
 }
 
 .title {
@@ -22,7 +29,7 @@ h3 {
 }
 
 .date {
-  color: rgb(201, 251, 255);
+  color: rgb(29, 1, 1);
 }
 
 #description {
