@@ -1,233 +1,5 @@
- <!-- <div className="card-container">
-            <div className="card">
-              <div className="front">
-                {/* <img
-                  src={
-                    'https://res.cloudinary.com/djt6ixhup/image/upload/v1673398546/samples/animals/reindeer.jpg'
-                  }
-                  className="portfolio-image"
-                  alt="portfolio"
-                /> */}
-                <div className="content">
-                  <p className="title">Front</p>
-                  <h4 className="description">This is The front</h4>
-                  <button className="btn">View</button>
-                </div>
-                
-              </div>
-              <div className="back">
-                <img
-                  src={
-                    'https://res.cloudinary.com/djt6ixhup/image/upload/v1673398546/samples/food/fish-vegetables.jpg'
-                  }
-                  className="portfolio-image"
-                  alt="portfolio"
-                />
-                <div className="content">
-                  <p className="title">Back</p>
-                  <h4 className="description">This is The Back</h4>
-                  <button className="btn">View</button>
-                </div>
-                
-              </div>
-            </div>
-            
-          </div>
-
-
-          .card-container {
-            position: relative;
-            width: 250px;
-            height: 320px;
-            // background: red;
-          }
-          
-          .card {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            transform-style: preserve-3d;
-            transition: all 0.5s ease;
-            background: yellow;
-          
-            .portfolio-image {
-              position: absolute;
-              z-index: -2;
-              width: 100%;
-              height: 100%;
-              object-fit: cover;
-            }
-          
-            .front {
-              position: absolute;
-              width: 100%;
-              height: 100%;
-              backface-visibility: hidden;
-              background: none;
-              color: black;
-              border-radius: 60px;
-              text-align: center;
-              
-            }
-            
-            .content {
-              text-align: center;
-              font-size: 15px;
-            }
-            
-            .back {
-              position: absolute;
-              width: 100%;
-              height: 100%;
-              backface-visibility: hidden;
-              background: brown;
-              color: fuchsia;
-              transform: rotateY(180deg);
-            }
-          }
-          
-          .card:hover {
-            transform: rotateY(180deg);
-          }
-          
-
-
-          portfolio portfolio-image
-
-
-          import React, { useEffect, useState } from 'react'
-import Loader from 'react-loaders'
-import AnimatedLetters from '../AnimatedLetters'
-import './index.scss'
-
-// import { getDocs, collection } from 'firebase/firestore'
-// import { db } from '../../firebase'
-
-const portfolio = [
-  {
-    id: 100,
-    image:
-      'https://res.cloudinary.com/djt6ixhup/image/upload/v1694305675/mobile-app_yg6864.png',
-    name: 'Ecommerce Web App',
-    description:
-      'This App pulls its uniquness from the ability to connect to the inventory of the supermarket',
-    url: 'https://github.com/segunbol',
-  },
-  {
-    id: 200,
-    image:
-      'https://res.cloudinary.com/djt6ixhup/image/upload/v1673398546/samples/food/fish-vegetables.jpg',
-    name: 'Ecommerce Mobile App',
-    description:
-      'This App pulls its uniquness from the ability to connect to the inventory of the supermarket',
-    url: 'https://github.com/segunbol',
-  },
-  {
-    id: 300,
-    image:
-      'https://res.cloudinary.com/djt6ixhup/image/upload/v1673398546/samples/animals/reindeer.jpg',
-    name: 'Study Buddy Web App',
-    description:
-      'This app was created to connect student across the globe for the purpose of research, learning and ideation',
-    url: 'https://github.com/segunbol',
-  },
-  {
-    id: 400,
-    image:
-      'https://res.cloudinary.com/djt6ixhup/image/upload/v1673398544/samples/ecommerce/analog-classic.jpg',
-    name: 'Chat App',
-    description:
-      'This is an in-app chat, that enables customers to easily communicate with vendors',
-    url: 'https://github.com/segunbol',
-  },
-]
-const Portfolio = () => {
-  const [flip, setFlip] = useState(false)
-  const [letterClass, setLetterClass] = useState('text-animate')
-  //   const [portfolio, setPortfolio] = useState([])
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setLetterClass('text-animate-hover')
-    }, 3000)
-
-    return () => {
-      clearTimeout(timer)
-    }
-  })
-
-  //   useEffect(() => {
-  //     getPortfolio()
-  //   }, [])
-
-  //   const getPortfolio = async () => {
-  //     const querySnapshot = await getDocs(collection(db, 'portfolio'))
-  //     setPortfolio(querySnapshot.docs.map((doc) => doc.data()))
-  //   }
-
-  const renderPortfolio = (portfolio) => {
-    return (
-      <div className="images-container">
-        {portfolio.map((port, idx) => {
-          return (
-            <div className="image-box" key={port.id}>
-              <div className='front'>
-                <img
-                  src={port.image}
-                  className="portfolio-image"
-                  alt="portfolio"
-                />
-                <div className="content">
-                  <p className="title">{port.name}</p>
-                  <h4 className="description">{port.description}</h4>
-                  <button className="btn" onClick={() => setFlip(!flip)}>
-                    View
-                  </button>
-                </div>
-              </div>
-              {/* <div className='back'>
-                <img
-                  src={port.image}
-                  className="portfolio-image"
-                  alt="portfolio"
-                />
-                <div className="content">
-                  <p className="title">{port.name}</p>
-                  <h4 className="description">{port.description}</h4>
-                  <button className="btn" onClick={() => setFlip(!flip)}>
-                    Viewyyryryryryryryryryryryry
-                  </button>
-                </div>
-              </div> */}
-            </div>
-          )
-        })}
-      </div>
-    )
-  }
-
-  return (
-    <>
-      <div className="container portfolio-page">
-        <h1 className="page-title">
-          <AnimatedLetters
-            letterClass={letterClass}
-            strArray={'Portfolio'.split('')}
-            idx={15}
-          />
-        </h1>
-        <div>{renderPortfolio(portfolio)}</div>
-      </div>
-      <Loader type="pacman" />
-    </>
-  )
-}
-
-export default Portfolio
-// onClick={() => window.open(port.url)} -->
-
 <!-- 
-  import { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import Loader from 'react-loaders'
 import AnimatedLetters from '../AnimatedLetters'
 import './index.scss'
@@ -246,9 +18,9 @@ const Experience = () => {
   }, [])
 
   return (
-    <>
-      <section className="page1">
-          <div className="container skills-page">
+    <div className='container'>  
+      <section className='one'>
+      <div className="container skills-page">
             <h1 className="page-title">
               <AnimatedLetters
                 letterClass={letterClass}
@@ -278,8 +50,8 @@ const Experience = () => {
             </h1>
           </div>
       </section>
-      <section className="page2">
-        <div className="container skills-page">
+      <section className='two'>
+      <div className="container skills-page">
           <div className="portfolio--container">
               <h2 className="skills--section--heading">
                 <AnimatedLetters
@@ -308,10 +80,9 @@ const Experience = () => {
               ))}
             </div>
         </div>
-        
       </section>
-      <section className="page3">
-        <div className="container skills-page">
+      <section className='three'>
+      <div className="container skills-page">
           <div className="portfolio--container">
               <h2 className="skills--section--heading">
                 <AnimatedLetters
@@ -323,18 +94,238 @@ const Experience = () => {
           </div>
           <TimeLine />
         </div>
-          
       </section>
-      
-        
-        
-      
-
       <Loader type="pacman" />
-    </>
+    </div>
   )
 }
 
 export default Experience
 // <TimeLine />
+ -->
+
+<!-- 
+  /* Hide scrollbar for webkit-based browsers */
+::-webkit-scrollbar {
+  width: 0.5em; /* Adjust the width as needed */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: transparent; /* Hide the thumb */
+}
+
+::-webkit-scrollbar-track {
+  background: transparent; /* Hide the track */
+}
+
+@keyframes glow {
+  0% {
+    border-bottom: 6px solid #181818;
+    box-shadow: 0 0 5px rgba(255, 215, 0, 0.5);
+  }
+  50% {
+    border-bottom: 6px solid #181818;
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.7);
+  }
+  100% {
+    border-bottom: 6px solid #181818;
+    box-shadow: 0 0 20px #ffd700;
+  }
+}
+
+section{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  scroll-snap-align: start;
+}
+
+.container {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll; 
+  height: 100vh;
+  // scroll-padding: 1%;
+}
+
+.one {
+  // background: #ffd700;
+}
+
+.two {
+  // background: blue;
+}
+
+.three {
+  // background: #be174a;
+  padding-bottom: 20px;
+}
+git push -u origin [Scroll_Snap]
+
+.skills-page {
+  padding-left: 100px;
+  padding-right: 50px;
+  width: calc(100% - 150px);
+  position: initial;
+  height: 100%;
+  overflow: auto;
+
+  h1.page-title {
+    margin-left: 50px;
+    margin-top: 50px;
+  }
+
+  .skills--section {
+    display: flex;
+    padding: 149.33px 85.33px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 106.667px;
+  }
+  .skills--section--heading {
+    color: #ffd700;
+    font-size: 44px;
+    font-weight: 700;
+    line-height: 77px;
+    margin-left: 60px;
+    margin-top: 60px;
+  }
+  .skills--section--container {
+    display: grid;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 42.6px;
+    grid-template-columns: repeat(4, 1fr);
+    padding-bottom: 13px;
+    max-height: 200px;
+  }
+  
+  .skills--section--card {
+    display: flex;
+    padding: 10px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+    flex: 1 0 0;
+    border-radius: 19.6px;
+    // background: rgb(26, 26, 36);
+    background-image: linear-gradient(
+      to right,
+      rgb(29, 29, 56),
+      #022c43,
+      #3b3b6d,
+      #444d79,
+      #314fa0
+    );
+    min-height: 150px;
+    // max-height: 350px;
+  }
+  // .skills--section--card:hover {
+  //   border-bottom: 6px solid #181818;
+  //   background:#ffd700;
+  //   opacity: 0.85;
+  
+  // }
+
+  .skills--section--card:hover {
+    animation: glow 1s infinite alternate;
+    background: #ffd700;
+    opacity: 0.85;
+  }
+
+  .skills--section--card:hover .skills--section--description {
+    color: #181818;
+  }
+
+  .skills--section--card:hover .skills--section--title {
+    color: #181818;
+  }
+  .skills--section--img {
+    display: flex;
+    // height: 32px;
+    // max-width: 10px;
+    // padding: 1.3px;
+    // justify-content: center;
+    // align-items: center;
+    // gap: 1.3px;
+    border-radius: 10px;
+    // background: rgb(240, 240, 240);
+    // box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.1);
+  }
+
+  // .skills--section--img img {
+  //   transition: transform 0.3s ease-in-out;
+  // }
+  
+  // .skills--section--img img:hover {
+  //   animation: bounce 0.9s ease ;
+  // }
+  
+  // @keyframes bounce {
+  //   0%, 20%, 50%, 80%, 100% {
+  //     transform: translateY(0);
+  //   }
+  //   40% {
+  //     transform: translateY(-20px); /* Adjust the bounce height as needed */
+  //   }
+  //   60% {
+  //     transform: translateY(-10px); /* Adjust the bounce height as needed */
+  //   }
+  // }
+
+  .skills--section--img img {
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .skills--section--img img:hover {
+    animation: spin 1s cubic-bezier(0.25, 0.1, 0.25, 1)  ;
+  }
+  
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .skills--section--card--content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1px;
+    align-self: stretch;
+  }
+  .skills--section--title {
+    color: rgba(88, 156, 228, 0.907);
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 5px;
+  }
+  .skills--section--description {
+    color: black;
+    font-size: 10.3px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 32px;
+  }
+
+  .experience--section--container {
+    display: grid;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 42.6px;
+    grid-template-columns: repeat(2, 1fr);
+    padding-bottom: 13px;
+  }
+}
+
+
+
+
+
+
  -->

@@ -26,34 +26,7 @@
   }
 }
 
-section{
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  scroll-snap-align: start;
-}
 
-.container {
-  scroll-snap-type: y mandatory;
-  overflow-y: scroll; 
-  height: 100vh;
-  // scroll-padding: 1%;
-}
-
-.one {
-  // background: #ffd700;
-}
-
-.two {
-  // background: blue;
-}
-
-.three {
-  // background: #be174a;
-  padding-bottom: 20px;
-}
 
 .skills-page {
   padding-left: 100px;
