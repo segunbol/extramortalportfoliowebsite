@@ -3,7 +3,7 @@ import Menu from '../Menu'
 import './index.scss'
 import Loader from 'react-loaders'
 import AnimatedLetters from '../AnimatedLetters'
-
+import { services } from '../../data/data'
 const post = []
 // const moment = () => {}
 
@@ -37,7 +37,11 @@ const FurtherReading = () => {
               }
               alt="PostImage"
             />
-            <h2>This is title</h2>
+            <h2><AnimatedLetters
+            letterClass={letterClass}
+            strArray={'Backend Development'.split('')}
+            idx={25}
+          /></h2>
             <p
             //   dangerouslySetInnerHTML={{
             //     __html: DOMPurify.sanitize(post.desc),

@@ -171,28 +171,28 @@ export const skills = [
     image: 'https://res.cloudinary.com/djt6ixhup/image/upload/v1695125891/front-end_1_aq1zz6.png',
     title: 'Front-End',
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspenmdisse varius eim in eros elementum tristique',
+      ' I am passionate about crafting stunning web and mobile experiences. Proficient in HTML, CSS, JavaScript, React Native, React.js, and Bootstrap.',
   },
   {
     id: '2',
     image: 'https://res.cloudinary.com/djt6ixhup/image/upload/v1695126124/backend_1_b4kdhr.png',
     title: 'Back-End',
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspenmdisse varius eim in eros elementum tristique',
+      'Skilled in Python, JavaScript, Django and Node.js. Crafting scalable solutions, I thrive in turning complex ideas into high-performance server-side applications.',
   },
   {
     id: '3',
     image: 'https://res.cloudinary.com/djt6ixhup/image/upload/v1695126275/settings_1_pkon7n.png',
     title: 'Dev-Ops',
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspenmdisse varius eim in eros elementum tristique',
+      'Proficient in Docker, Kubernetes, GitLab, GitHub, and Jenkins. Automating CI/CD pipelines, ensuring scalability and robust infrastructure for efficient software delivery.',
   },
   {
     id: '4',
     image: 'https://res.cloudinary.com/djt6ixhup/image/upload/v1695126554/database_1_j70ovt.png',
     title: 'System Design',
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspenmdisse varius eim in eros elementum tristique',
+      'Rendering systems design with expertise in cloud computing (AWS, Azure), and efficient databases (SQL, NoSQL). Crafting scalable, resilient architectures. ',
   },
   
 ]

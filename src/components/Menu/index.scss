@@ -16,19 +16,34 @@ a {
     #444d79,
     #314fa0
   );
-  border-radius: 10px;
+  border-radius: 5px;
   
   align-items: center; /* Center items horizontally */
   justify-content: center; /* Center items vertically */
   text-align: center;
 
-  a {
-    border-radius: 15px;
+  .list {
+    border-radius: 10px;
     border-bottom: 1px solid;
-    display: block;
-    text-align: left; /* Start text from the left */
+    width: 100%;
+    display: flex; // Use flexbox to align items horizontally
+    align-items: center; // Vertically center items
+    gap: 10px;
     padding-left: 10px;
+    transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+  }
+  
+  a {
+    display: block;
+    transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+    text-align: left; /* Start text from the left */
+    // padding-left: 5px;
+  }
 
+  .list:hover {
+    transform: translateY(-5px);
+    color: #ffd700;
+    border-bottom: 4px solid;
   }
 
   h1 {
