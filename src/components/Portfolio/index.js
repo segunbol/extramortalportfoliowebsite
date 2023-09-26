@@ -43,9 +43,10 @@ const portfolio = [
       'This is an in-app chat, that enables customers to easily communicate with vendors',
     url: 'https://github.com/segunbol',
   },
+  
 ]
 const Portfolio = () => {
-  const [flip, setFlip] = useState(false);
+  // const [flip, setFlip] = useState(false);
   const [letterClass, setLetterClass] = useState('text-animate')
   //   const [portfolio, setPortfolio] = useState([])
 
@@ -84,7 +85,7 @@ const Portfolio = () => {
                   <div className="content">
                     <p className="title">{port.name}</p>
                     <h4 className="description">{port.description}</h4>
-                    <button className="btn" onClick={() => setFlip(!flip)}>
+                    <button className="btn">
                       View
                     </button>
                   </div>

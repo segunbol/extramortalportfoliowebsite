@@ -194,4 +194,5 @@ export const skills = [
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspenmdisse varius eim in eros elementum tristique',
   },
+  
 ]

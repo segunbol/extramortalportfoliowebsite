@@ -26,7 +26,34 @@
   }
 }
 
+section{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  scroll-snap-align: start;
+}
 
+.container {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll; 
+  height: 100vh;
+  // scroll-padding: 1%;
+}
+
+.one {
+  // background: #ffd700;
+}
+
+.two {
+  // background: blue;
+}
+
+.three {
+  // background: #be174a;
+  padding-bottom: 20px;
+}
 
 .skills-page {
   padding-left: 100px;
@@ -68,12 +95,12 @@
   }
   
   .skills--section--card {
-    display: flex;
+    // display: flex;
     padding: 10px;
-    flex-direction: column;
-    align-items: flex-start;
+    // flex-direction: column;
+    // align-items: flex-start;
     gap: 5px;
-    flex: 1 0 0;
+    // flex: 1 0 0;
     border-radius: 19.6px;
     // background: rgb(26, 26, 36);
     background-image: linear-gradient(
