@@ -11,6 +11,7 @@ import {
 } from 'react-vertical-timeline-component'
 
 import 'react-vertical-timeline-component/style.min.css'
+import { Link } from 'react-router-dom'
 
 const TimeLine = () => {
   let workIconStyles = { background: '#06D6A0' }
@@ -56,14 +57,14 @@ const TimeLine = () => {
                 </h5>
                 <p id="description">{element.description}</p>
                 {showButton && (
-                  <a
+                  <Link
                     className={`button ${
                       isWorkIcon ? 'workButton' : 'schoolButton'
                     }`}
-                    href="/"
+                    to="/"
                   >
                     {element.buttonText}
-                  </a>
+                  </Link>
                 )}
               </div>
             </VerticalTimelineElement>

@@ -51,12 +51,12 @@ const Home = () => {
             <span className={`${letterClass} _14`}>'m</span>
             <img
               src={LogoTitle}
-              alt="JavaScript Developer Name, Web Developer Name"
+              alt="Backend Developer Name, Web Developer Name"
             />
             <AnimatedLetters
               letterClass={letterClass}
               strArray={nameArray}
-              idx={15}
+              idx={20}
             />
             <br />
             <AnimatedLetters

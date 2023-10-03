@@ -2,13 +2,14 @@ import { useEffect, useState } from 'react'
 import Loader from 'react-loaders'
 import AnimatedLetters from '../AnimatedLetters'
 import './index.scss'
-import { workExperience, skills } from '../../data/data'
+import { skills } from '../../data/data'
 import { motion } from 'framer-motion'
 import TimeLine from '../Timeline'
+import { Link } from 'react-router-dom'
 
 const Experience = () => {
   const [letterClass, setLetterClass] = useState('text-animate')
-
+  const subject = 0
   useEffect(() => {
     const timeoutId = setTimeout(() => {
       setLetterClass('text-animate-hover')
@@ -61,16 +62,16 @@ const Experience = () => {
               />{' '}
             </h2>
           </div>
-          <motion.div
+          {/* <motion.div
             initial="hidden"
             whileInView="visible"
-            viewport={{ amount: 0.5 }}
+            viewport={{ amount: 0.1 }}
             transition={{ duration: 0.8 }}
             variants={{
               hidden: { opacity: 0, x: -50 },
               visible: { opacity: 1, x: 0 },
             }}
-          >
+          > */}
             <div className="skills--section--container">
               {skills?.map((item, index) => (
                 <div className="skills--section--container--inner" key={index}>
@@ -83,15 +84,15 @@ const Experience = () => {
                       <p className="skills--section--description">
                         {item.description}
                       </p>
-                      <button className='btn'>
-                        click here
-                      </button>
+                      <Link to={`/further/${item.id}/${subject}`}>
+                        <button className="btn">click here</button>
+                      </Link>
                     </div>
                   </div>
                 </div>
               ))}
             </div>
-          </motion.div>
+          {/* </motion.div> */}
         </div>
       </section>
       <section className="three">

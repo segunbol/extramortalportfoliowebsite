@@ -5,6 +5,7 @@ import {
   faArrowRight,
 } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { Link } from 'react-router-dom'
 
 // const posts = [
 //   {
@@ -57,15 +58,18 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 //   },
 // ]
 
-const Menu = () => {
+const Menu = ({data, onMenuItemClick}) => {
   return (
     <div>
       <div className="menu">
         <h2>Other Rendered Services</h2>
-        {services.map((post) => (
-          <div className='list'>
+        {data.map((post, index) => (
+          <div className='list' key={index}>
             <FontAwesomeIcon icon={faArrowRight} color="rgba(88, 156, 228, 0.907)" />
-            <a key={post.id} href={post?.img}>{post?.title}</a>
+            <div onClick={() => onMenuItemClick(post.id)}> {/* Call the callback function on button click */}
+              {post?.title}
+            </div>
+            {/* {console.log(post.id)} */}
           </div> 
         ))}
       </div>
