@@ -62,7 +62,7 @@ const Menu = ({data, onMenuItemClick}) => {
   return (
     <div>
       <div className="menu">
-        <h2>Other Rendered Services</h2>
+        <h2>Rendered Services</h2>
         {data.map((post, index) => (
           <div className='list' key={index}>
             <FontAwesomeIcon icon={faArrowRight} color="rgba(88, 156, 228, 0.907)" />

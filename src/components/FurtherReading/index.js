@@ -61,9 +61,7 @@ const FurtherReading = () => {
         <div className="single">
           <div className="content">
             <img
-              src={
-                'https://images.pexels.com/photos/7008010/pexels-photo-7008010.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
-              }
+              src={titled.images}
               alt="PostImage"
             />
             <h2>
@@ -78,7 +76,7 @@ const FurtherReading = () => {
             //     __html: DOMPurify.sanitize(post.desc),
             //   }}
             >
-              {articular ? articular : titled.description}
+              {articular ? articular : titled.article}
             </p>{' '}
           </div>
           <Menu data={filteredServices} onMenuItemClick={handleMenuItemClick} />

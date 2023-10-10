@@ -20,7 +20,7 @@ const About = () => {
       setLetterClass('text-animate-hover')
     }, 4000)
 
-    return () => clearTimeout(timeoutId);
+    return () => clearTimeout(timeoutId)
   }, [])
 
   return (
@@ -35,21 +35,29 @@ const About = () => {
             />
           </h1>
           <p>
-            I'm a very ambitious front-end developer looking for a role in an
-            established IT company with the opportunity to work with the latest
-            technologies on challenging and diverse projects.
+            Segun is a product-focused software engineer building server-side
+            applications and documenting solutions in server-side development.
+            He has been lucky to build scalable software products that are
+            thriving, that cut across Finance, Education, and Marketing and He
+            is always looking to explore more areas and fields.
           </p>
           <p align="LEFT">
-            I'm quiet confident, naturally curious, and perpetually working on
-            improving my chops one design problem at a time.
+            He has built in Python with web frameworks such as Django and Flask,
+            and also in Javascript with Nodejs, Express and NextJs. He is currently
+            work with NextJs and Django. He has also picked up a skills along
+            the way such as continuous integration, continuous deployment,
+            systems design and architecture, containers and orchestration.
           </p>
           <p>
-            If I need to define myself in one sentence that would be a family
-            person, father of a beautiful daughter, a sports fanatic,
-            photography enthusiast, and tech-obsessed!!!
+            Currently, He is working with a team to build a Performance
+            Management System, Ecommerce App (Mobile and WebApp), exploring new
+            product ideas, tinkering with architectures and He is documenting
+            what he is learning via technical articles. If I need to define
+            myself in one sentence that would be a family person, father of a
+            beautiful daughter, a sports fanatic, photography enthusiast, and
+            tech-obsessed!!!
           </p>
         </div>
-
         <div className="stage-cube-cont">
           <div className="cubespinner">
             <div className="face1">
