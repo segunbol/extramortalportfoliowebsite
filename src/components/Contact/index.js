@@ -21,7 +21,7 @@ const Contact = () => {
     e.preventDefault()
 
     emailjs
-      .sendForm('gmail', 'template_YeJhZkgb', form.current, 'your-token')
+      .sendForm('service_3yxpvr3', 'template_0vralhn', form.current, '6uvyA0UQnhqiCKzXx')
       .then(
         () => {
           alert('Message successfully sent!')
@@ -53,13 +53,13 @@ const Contact = () => {
             <form ref={form} onSubmit={sendEmail}>
               <ul>
                 <li className="half">
-                  <input placeholder="Name" type="text" name="name" required />
+                  <input placeholder="Name" type="text" name="from_name" required />
                 </li>
                 <li className="half">
                   <input
                     placeholder="Email"
                     type="email"
-                    name="email"
+                    name="reply_to"
                     required
                   />
                 </li>
@@ -95,6 +95,8 @@ const Contact = () => {
           Magodo Phase 1  <br />
           <br />
           <span>segunbolawole@yahoo.com</span>
+          <br />
+          <span>+2348067667437</span>
         </div>
         {/* <div className="map-wrap">
           <MapContainer center={[44.96366, 19.61045]} zoom={13}>

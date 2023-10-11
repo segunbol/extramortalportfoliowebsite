@@ -367,7 +367,7 @@ export const skills = [
     title: 'Dev-Ops',
     description:
       'Proficient in Docker, Kubernetes, GitLab, and Jenkins. Automating CI/CD pipelines, ensuring scalability and robust infrastructure for efficient software delivery.',
-    article: '',
+    article: "Throughout my career, I've honed a diverse skill set through hands-on experience and fruitful team collaborations. Version control became second nature as I mastered Git, ensuring code stability and collaboration ease. Containerization and orchestration, thanks to Docker and Kubernetes, streamlined deployments. CI/CD pipelines, facilitated by Jenkins, improved efficiency. Monitoring and logging with tools like Prometheus and ELK Stack enhanced troubleshooting. Infrastructure as Code, using Terraform, allowed for scalable, reproducible environments. Continuous testing methodologies like Selenium ensured robust applications. Real-time insights through continuous monitoring and alerting kept systems robust and secure. These skills, born from teamwork and project diversity, empower me to drive innovation and efficiency in my work.",
     images:
       'https://res.cloudinary.com/djt6ixhup/image/upload/v1696866259/2648921_ce8vk8.jpg',
   },

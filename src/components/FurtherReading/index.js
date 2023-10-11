@@ -71,11 +71,7 @@ const FurtherReading = () => {
                 idx={15}
               />
             </h2>
-            <p
-            //   dangerouslySetInnerHTML={{
-            //     __html: DOMPurify.sanitize(post.desc),
-            //   }}
-            >
+            <p>
               {articular ? articular : titled.article}
             </p>{' '}
           </div>
