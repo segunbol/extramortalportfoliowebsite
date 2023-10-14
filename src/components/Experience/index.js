@@ -20,7 +20,7 @@ const Experience = () => {
 
   return (
     <div className="container">
-      <section className="one">
+      {/* <section className="one">
         <div className="container skills-page">
           <h1 className="page-title">
             <AnimatedLetters
@@ -50,7 +50,7 @@ const Experience = () => {
             />
           </h1>
         </div>
-      </section>
+      </section> */}
       <section className="two">
         <div className="container skills-page">
           <div className="portfolio--container">
@@ -62,6 +62,7 @@ const Experience = () => {
               />{' '}
             </h2>
           </div>
+          <div class="scroll-down"></div>
           {/* <motion.div
             initial="hidden"
             whileInView="visible"
@@ -101,7 +102,7 @@ const Experience = () => {
             <h2 className="skills--section--heading">
               <AnimatedLetters
                 letterClass={letterClass}
-                strArray={'Experience'.split('')}
+                strArray={'Jobs'.split('')}
                 idx={25}
               />{' '}
             </h2>
