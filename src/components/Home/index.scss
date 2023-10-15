@@ -92,7 +92,7 @@
 
     &:before {
       content: '';
-      background:#282c34;
+      background: #282c34;
       width: 450px;
       height: 350px;
       bottom: 0px;
@@ -115,7 +115,7 @@
   }
 }
 
-@media screen and (max-width: 1200px) {
+@media (min-width: 481px) and (max-width: 1200px) {
   .tags,
   .home-page h1:before,
   .home-page h1:after {
@@ -161,4 +161,61 @@
     margin: auto;
     filter: grayscale(0) saturate(2);
   }
+}
+
+@media screen and (max-width: 480px) {
+  .tags,
+  .home-page h1:before,
+  .home-page h1:after {
+    display: none;
+  }
+  h1 {
+    font-size: 26px !important;
+    line-height: 53px !important;
+  }
+
+  .home-page .text-zone {
+    position: initial;
+    width: 100%;
+    transform: none;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+
+  .home-page .flat-button {
+    float: none;
+    display: block;
+    margin: 20px auto 0 auto;
+    width: 124px;
+  }
+
+  .home-page .smile {
+    position: relative;
+    width: 200px;
+    height: 300px;
+    bottom: 40px;
+    right: 0;
+    box-sizing: border-box;
+    margin: auto;
+    left: 0;
+
+    &:before {
+      display: none;
+    }
+  }
+
+  .home-page .smile img {
+    position: relative;
+    margin: auto;
+    filter: grayscale(0) saturate(2);
+  }
+  .home-page h1 img {
+    width: 16px;
+  }
+
+  .text-animate-hover {
+    min-width: 8px;
+    display: inline-block;
+    animation-fill-mode: both;
+}
 }
