@@ -14,14 +14,19 @@ const Contact = () => {
       setLetterClass('text-animate-hover')
     }, 4000)
 
-    return () => clearTimeout(timeoutId);
+    return () => clearTimeout(timeoutId)
   }, [])
 
   const sendEmail = (e) => {
     e.preventDefault()
 
     emailjs
-      .sendForm('service_3yxpvr3', 'template_0vralhn', form.current, '6uvyA0UQnhqiCKzXx')
+      .sendForm(
+        'service_3yxpvr3',
+        'template_0vralhn',
+        form.current,
+        '6uvyA0UQnhqiCKzXx'
+      )
       .then(
         () => {
           alert('Message successfully sent!')
@@ -45,7 +50,7 @@ const Contact = () => {
             />
           </h1>
           <p>
-            I am interested in freelance opportunities - especially on ambitious
+            Segun is interested in opportunities - especially on ambitious
             or large projects. However, if you have any other requests or
             questions, don't hesitate to contact me using below form either.
           </p>
@@ -53,7 +58,12 @@ const Contact = () => {
             <form ref={form} onSubmit={sendEmail}>
               <ul>
                 <li className="half">
-                  <input placeholder="Name" type="text" name="from_name" required />
+                  <input
+                    placeholder="Name"
+                    type="text"
+                    name="from_name"
+                    required
+                  />
                 </li>
                 <li className="half">
                   <input
@@ -92,7 +102,7 @@ const Contact = () => {
           <br />
           Lagos State
           <br />
-          Magodo Phase 1  <br />
+          Magodo Phase 1 <br />
           <br />
           <span>segunbolawole@yahoo.com</span>
           <br />

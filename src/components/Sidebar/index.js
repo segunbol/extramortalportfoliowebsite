@@ -102,7 +102,7 @@ const Sidebar = () => {
           </a>
         </li>
         <li>
-          <a href="https://www.youtube.com" rel="noreferrer" target="_blank">
+          <a href="https://www.youtube.com/channel/UCVcWvpWx_vba7gAStvmANPA" rel="noreferrer" target="_blank">
             <FontAwesomeIcon
               icon={faYoutube}
               color="#4d4d4e"
@@ -111,7 +111,7 @@ const Sidebar = () => {
           </a>
         </li>
         <li>
-          <a href="skype:live:bobangajicsm" rel="noreferrer" target="_blank">
+          <a href="https://api.whatsapp.com/send?phone=2348067667437" rel="noreferrer" target="_blank">
             <FontAwesomeIcon
               color="#4d4d4e"
               className="anchor-icon"

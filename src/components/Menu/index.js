@@ -1,11 +1,12 @@
 import React from 'react'
 import './index.scss'
-import { services } from '../../data/data'
-import {
-  faArrowRight,
-} from '@fortawesome/free-solid-svg-icons'
+// import { services } from '../../data/data'
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { Link } from 'react-router-dom'
+// import { Link } from 'react-router-dom'
+import {
+  faDownload,
+} from '@fortawesome/free-solid-svg-icons'
 
 // const posts = [
 //   {
@@ -58,25 +59,33 @@ import { Link } from 'react-router-dom'
 //   },
 // ]
 
-const Menu = ({data, onMenuItemClick}) => {
+const Menu = ({ data, onMenuItemClick }) => {
   return (
     <div>
       <div className="menu">
         <h2>Rendered Services</h2>
         {data.map((post, index) => (
-          <div className='list' key={index}>
-            <FontAwesomeIcon icon={faArrowRight} color="rgba(88, 156, 228, 0.907)" />
-            <div onClick={() => onMenuItemClick(post.id)}> {/* Call the callback function on button click */}
+          <div className="list" key={index}>
+            <FontAwesomeIcon
+              icon={faArrowRight}
+              color="rgba(88, 156, 228, 0.907)"
+            />
+            <div onClick={() => onMenuItemClick(post.id)}>
+              {' '}
+              {/* Call the callback function on button click */}
               {post?.title}
             </div>
             {/* {console.log(post.id)} */}
-          </div> 
+          </div>
         ))}
       </div>
-      <div>
-        <h3>
-            Download CV
-        </h3>
+      <div className="btn-con">
+        <a href="/" className="main-btn" alt="/">
+          <span className="btn-text">DOWNLOAD CV</span>
+          <span className="btn-icon">
+          <FontAwesomeIcon icon={faDownload} color="#4d4d4e" />
+          </span>
+        </a>
       </div>
     </div>
   )
