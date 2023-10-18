@@ -54,7 +54,7 @@ const About = () => {
             product ideas, tinkering with architectures and He is documenting
             what he is learning via technical articles. If I need to define
             myself in one sentence that would be a family person,a fitness enthusiast,
-            a food lover, and tech-obsessed!!!
+            a food lover, and tech-obsessed.
           </p>
         </div>
         <div className="stage-cube-cont">
