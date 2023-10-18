@@ -53,9 +53,8 @@ const About = () => {
             Management System, Ecommerce App (Mobile and WebApp), exploring new
             product ideas, tinkering with architectures and He is documenting
             what he is learning via technical articles. If I need to define
-            myself in one sentence that would be a family person, father of a
-            beautiful daughter, a sports fanatic, photography enthusiast, and
-            tech-obsessed!!!
+            myself in one sentence that would be a family person,a fitness enthusiast,
+            a food lover, and tech-obsessed!!!
           </p>
         </div>
         <div className="stage-cube-cont">
