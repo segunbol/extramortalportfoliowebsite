@@ -62,9 +62,9 @@ const Experience = () => {
               />{' '}
             </h2>
           </div>
-          <a href='#three'>
+          
             <div class="scroll-down"></div>
-          </a>
+          
           {/* <motion.div
             initial="hidden"
             whileInView="visible"
